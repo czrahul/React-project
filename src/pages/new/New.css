@@ -1,0 +1,59 @@
+.Agency .top {
+    float: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px;
+
+}
+.top .hometag {
+    float: right;
+    margin: 10px;
+}
+.form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+.required::after {
+    content:" *";
+    color: red;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30%;
+    gap: 10px;
+    margin: 10px 20px 0px 20px ;
+}
+.formInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.formInput input {
+    width: 280px;
+    height: 40px;
+}
+
+.formInput input::placeholder{
+    margin-left: 10px;
+
+}
+.bank, .personal {
+    font-size: 20px;
+    font-weight: bold;
+    height: 20px;
+    margin-left: 20px;
+}
+.formInput label{
+    font-size: 18px;
+    padding: 10px 0px 10px 0px;
+    font-weight: 500;
+}
