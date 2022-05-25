@@ -1,0 +1,21 @@
+.home {
+    display: flex;
+}
+.home .homeContainer {
+        flex: 6;
+        background-color:rgb(237, 241, 245);
+        /* background-color: aliceblue; */
+}
+
+.home .homeContainer .widgets {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+.home .homeContainer h1{
+    padding: 50px 20px 20px 20px;
+}
+.home .homeContainer h4{
+    padding: 20px;
+    color: #A3A3A3;
+}
