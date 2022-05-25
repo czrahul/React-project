@@ -1,0 +1,30 @@
+.widget {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 10px;
+    -webkit-box-shadow: 7px 15px 19px 0px #A3A3A3; 
+box-shadow: 7px 15px 19px 0px #A3A3A3;
+height: 50px;
+    align-items: center;
+    height: 70px;
+    background-color: white;
+}
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.right {
+    color: #A3A3A3;
+}
+.title {
+    
+    font-weight: bold;
+    font-size: 14px;
+    color: #A3A3A3;
+}
+.counter {
+    font-weight: 500;
+    font-size: 20px;
+}
