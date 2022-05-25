@@ -11,7 +11,7 @@ const New = () => {
             <div className="hometag"><HomeIcon/></div>
             </Link>
             <div className="top">
-                Agency Request
+                My Profile
             </div>
             </div>
             
