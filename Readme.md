@@ -8,9 +8,11 @@ Dashboard includes a sidebar through which we will move to to Host user details 
 
 I have hosted this project on netlify : https://agency-portal.netlify.app/
 
+Download the server.js file and run in the terminal by $ node server.js command
+
 Username and password for login is 
 
-Username: rahul@gmail.com
+Username: as@jyh.cc
 
 Password: 123456
 
