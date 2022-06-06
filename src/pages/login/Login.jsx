@@ -1,9 +1,8 @@
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom"
 import Topnav from "../../components/topnav/Topnav"
 import "./login.css"
 import axios from 'axios'
-import {setUserSession } from "../../Utils/Common"
 import {Link} from "react-router-dom"
 
 
@@ -14,28 +13,32 @@ const Login = (props) => {
     const [password, setPassword]=useState("");
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
-
+    const [logdata, setlog]= useState([]);
     const navigate = useNavigate();
+
+    useEffect(()=> {
+        axios.get("http://localhost:4000/").then(function(response) {
+            setlog(response.data);
+            console.log(logdata)
+    })
+}, [logdata])
 
     const Signin = () => {
         setError(null);
         setLoading(true);
-        axios.post("http://localhost:4000/users/signin", {
-            username: username,
-            password: password
-        }).then(response => {
+        if(!username || !password){
             setLoading(false);
-            setUserSession(response.data.token, response.data.user);
+            setError("Username and password required")
+        }
+        else if(username !== logdata.email || password !== logdata.password){
+            setLoading(false);
+            setError("Wrong credentials")
+        }
+        else
+        {
+            setLoading(false);
             navigate('/home')
-        }).catch(error => {
-            setLoading(false);
-            if(error.response.status === 401 || error.response.status === 400) {
-                setError(error.response.data.message);
-            }
-            else {
-                setError("Something went wrong. Please try again later.");
-            }
-        });
+        }
     }
     
     
